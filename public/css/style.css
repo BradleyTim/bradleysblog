@@ -1,0 +1,42 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white; 
+    color: #000;
+
+    display: flex;
+    flex-direction: column;
+    flex: auto 1 auto;
+    min-height: 100vh;
+
+    font-family: 'figtree', sans; 
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+}
+
+.container {
+    max-width: 80%;
+    margin-inline: auto;
+}
