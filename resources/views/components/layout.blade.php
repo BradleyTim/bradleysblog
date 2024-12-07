@@ -38,15 +38,13 @@
                         <a href="/contact">Contact</a>
                     </li>
                     <li>
-                        <a href="/work">Work</a>
+                        <a href="/blog">Blog</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="container">
-                <h1>Bradley Tim</h1>
-            </section>
+            {{ $slot }}
         </main>
         <footer>
             <section class="container">
