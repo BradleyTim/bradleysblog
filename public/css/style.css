@@ -8,17 +8,16 @@ body {
     background: white; 
     color: #000;
 
-    display: flex;
-    flex-direction: column;
-    flex: auto 1 auto;
+    display: grid;
+    /* grid-template-rows: 1fr auto 1fr; */
     min-height: 100vh;
 
-    font-family: 'figtree', sans; 
+    font-family: 'figtree', sans;
+    line-height: 1.5; 
 }
 
-nav ul {
-    display: flex;
-    gap: 1rem;
+button {
+    all: unset;
 }
 
 a {
@@ -26,8 +25,14 @@ a {
     text-decoration: none;
 }
 
-nav li {
-    list-style: none;
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  box-shadow: none;
+  outline: #000 dotted 2px;
+  outline-offset: .05em;
 }
 
 nav {
@@ -36,7 +41,29 @@ nav {
     padding-block: 1.5rem;
 }
 
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    list-style: none;
+    padding-inline-end: 1rem;
+}
+
+nav ul li:not(:last-child) {
+    border-right: 1px solid #666;
+}
+
 .container {
-    max-width: 80%;
-    margin-inline: auto;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.stack > * + * {
+    margin-block-start: 1.5rem;
 }

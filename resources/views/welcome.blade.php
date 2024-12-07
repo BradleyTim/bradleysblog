@@ -21,11 +21,11 @@
             </style>
         @endif
     </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
+    <body class="stack">
         <header>
             <nav class="container">
                 <div>
-                    Bradley
+                    <a class="logo" href="/">Bradley</a>
                 </div>
                 <ul>
                     <li>
@@ -43,7 +43,15 @@
                 </ul>
             </nav>
         </header>
-        <main class="container">Bradley's World</main>
-        <footer class="container">Copyright &copy; 2024</footer>
+        <main>
+            <section class="container">
+                <h1>Bradley Tim</h1>
+            </section>
+        </main>
+        <footer>
+            <section class="container">
+                <p>Copyright &copy; 2024</p>
+            </section>
+        </footer>
     </body>
 </html>
