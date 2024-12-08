@@ -17,11 +17,28 @@ Route::get('/contact', function () {
 
 Route::get('/blog', function () {
     return view('blogs.index', [
-        'blogs' => Blog::with('user')->simplePaginate(3)
+        'blogs' => Blog::with('user')->latest()->simplePaginate(10)
     ]);
+});
+
+Route::get('/blog/create', function () {
+    return view('blogs.create');
 });
 
 Route::get('/blog/{id}', function ($id) {
     $blog = Blog::with('user')->findOrFail($id);
     return view('blogs.show', ['blog' => $blog]);
+});
+
+Route::post('/blog', function () {
+    //TODO: validation 
+
+    Blog::create([
+        'title' => request('title'),
+        'slug' => request('slug'),
+        'body' => request('body'),
+        'user_id' => 1
+    ]);
+
+    return redirect('/blog');
 });
