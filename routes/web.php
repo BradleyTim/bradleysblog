@@ -58,5 +58,9 @@ Route::get('/blog/{id}', function ($id) {
 
     $blog = Arr::first($blogs, fn($blog) => $blog['id'] == $id);
 
+    if (!$blog) {
+        abort(404);
+    }
+
     return view('blogs.show', ['blog' => $blog]);
 });
