@@ -25,20 +25,20 @@
         <header>
             <nav class="container">
                 <div>
-                    <a class="logo" href="/">Bradley</a>
+                    <a  href="/" class="{{ request()->is('/') ? 'active' : ''}} logo">Bradley</a>
                 </div>
                 <ul>
                     <li>
-                        <a href="/">Home</a>
+                        <a href="/" class="{{ request()->is('/') ? 'active' : ''}} logo">Home</a>
                     </li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/about" class="{{ request()->is('about') ? 'active' : ''}} logo">About</a>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a href="/contact" class="{{ request()->is('contact') ? 'active' : ''}} logo">Contact</a>
                     </li>
                     <li>
-                        <a href="/blog">Blog</a>
+                        <a href="/blog" class="{{ request()->is('blog') ? 'active' : ''}} logo">Blog</a>
                     </li>
                 </ul>
             </nav>

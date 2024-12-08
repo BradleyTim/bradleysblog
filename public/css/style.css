@@ -67,3 +67,11 @@ nav ul li:not(:last-child) {
 .stack > * + * {
     margin-block-start: 1.5rem;
 }
+
+.active {
+    color: orangered;
+}
+
+main * + * {
+    margin-block-start: 1.5rem;
+}
