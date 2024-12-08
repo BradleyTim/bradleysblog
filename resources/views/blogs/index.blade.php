@@ -1,5 +1,4 @@
 <x-layout>
-    <x-slot:heading>Blogs</x-slot:heading>
     <section class="container">
         <h1>Blogs</h1>
         <div>
