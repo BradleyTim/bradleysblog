@@ -17,10 +17,11 @@ Route::get('/contact', function () {
 
 Route::get('/blog', function () {
     return view('blogs.index', [
-        'blogs' => Blog::all()
+        'blogs' => Blog::with('user')->get()
     ]);
 });
 
 Route::get('/blog/{id}', function ($id) {
-    return view('blogs.show', ['blog' => Blog::findOrFail($id)]);
+    $blog = Blog::with('user')->findOrFail($id);
+    return view('blogs.show', ['blog' => $blog]);
 });
