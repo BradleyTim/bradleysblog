@@ -4,8 +4,8 @@
         <div>
             @foreach($blogs as $blog)
             <article>
-                <a href="/blog/{{ $blog['id'] }}">
-                    {{ $blog['title'] }}
+                <a href="/blog/{{ $blog->id }}">
+                    {{ $blog->title }}
                 </a>
             </article>
             @endforeach

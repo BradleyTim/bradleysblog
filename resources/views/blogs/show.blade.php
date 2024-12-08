@@ -1,8 +1,8 @@
 <x-layout>
     <section class="container">
-        <h1>{{$blog['title']}}</h1>
+        <h1>{{ $blog->title }}</h1>
         <div>
-            {{$blog['body']}}
+            {{ $blog->body }}
         </div>
     </section>
 </x-layout>
