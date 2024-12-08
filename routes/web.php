@@ -31,7 +31,12 @@ Route::get('/blog/{id}', function ($id) {
 });
 
 Route::post('/blog', function () {
-    //TODO: validation 
+    
+    request()->validate([
+        'title' => ['required', 'min:3', 'max:255'],
+        'slug' => ['required', 'min:3', 'max:255'],
+        'body' => ['required', 'min:3']
+    ]);
 
     Blog::create([
         'title' => request('title'),
