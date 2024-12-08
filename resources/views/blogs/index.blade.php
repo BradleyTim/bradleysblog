@@ -10,5 +10,8 @@
             </article>
             @endforeach
         </div>
+        <div>
+            {{ $blogs->links() }}
+        </div>
     </section>
 </x-layout>

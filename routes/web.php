@@ -17,7 +17,7 @@ Route::get('/contact', function () {
 
 Route::get('/blog', function () {
     return view('blogs.index', [
-        'blogs' => Blog::with('user')->get()
+        'blogs' => Blog::with('user')->simplePaginate(3)
     ]);
 });
 
