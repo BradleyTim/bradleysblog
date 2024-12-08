@@ -96,3 +96,9 @@ button {
     color: #fefefe;
     cursor: pointer; 
 }
+
+.error {
+    color: orangered;
+    font-size: 0.95rem;
+    font-style: italic;
+}
