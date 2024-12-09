@@ -47,3 +47,36 @@ Route::post('/blog', function () {
 
     return redirect('/blog');
 });
+
+Route::get('/blog/{id}/edit', function ($id) {
+    $blog = Blog::with('user')->findOrFail($id);
+    return view('blogs.edit', ['blog' => $blog]);
+});
+
+Route::patch('/blog/{id}', function ($id) {
+    request()->validate([
+        'title' => ['required', 'min:3', 'max:255'],
+        'slug' => ['required', 'min:3', 'max:255'],
+        'body' => ['required', 'min:3']
+    ]);
+
+    $blog = Blog::with('user')->findOrFail($id);
+
+    //todo: authorize
+
+    $blog->update([
+        'title' => request('title'),
+        'slug' => request('slug'),
+        'body' => request('body'),
+    ]);
+
+    return redirect("/blog/{$blog->id}");
+});
+
+Route::delete('/blog/{id}', function ($id) {
+    //todo: authorize
+
+    $blog = Blog::with('user')->findOrFail($id);
+    $blog->delete();
+    return redirect('/blog');
+});
