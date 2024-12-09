@@ -40,6 +40,9 @@
                     <li>
                         <a href="/blog" class="{{ request()->is('blog') ? 'active' : ''}} logo">Blog</a>
                     </li>
+                    <li>
+                        <a href="/blog/create" class="{{ request()->is('blog/create') ? 'active' : ''}} logo">Create</a>
+                    </li>
                 </ul>
             </nav>
         </header>

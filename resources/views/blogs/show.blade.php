@@ -5,5 +5,8 @@
         <div>
             {!! $blog->body !!}
         </div>
+        <div>
+            <a href="/blog/{{ $blog->id }}/edit">Edit</a>
+        </div>
     </section>
 </x-layout>
