@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\RegisteredUserController;
+use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -22,3 +24,9 @@ Route::get('/blog/{blog}', [BlogController::class, 'show']);
 Route::get('/blog/{blog}/edit', [BlogController::class, 'edit']);
 Route::patch('/blog/{blog}', [BlogController::class, 'update']);
 Route::delete('/blog/{blog}', [BlogController::class, 'destroy']);
+
+Route::get('/register', [RegisteredUserController::class, 'create']);
+Route::post('/register', [RegisteredUserController::class, 'store']);
+
+Route::get('/login', [SessionController::class, 'create']);
+Route::post('/login', [SessionController::class, 'store']);

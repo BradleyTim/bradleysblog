@@ -43,6 +43,19 @@
                     <li>
                         <a href="/blog/create" class="{{ request()->is('blog/create') ? 'active' : ''}} logo">Create</a>
                     </li>
+                    @guest
+                    <li>
+                        <a href="/login" class="{{ request()->is('login') ? 'active' : ''}} logo">Log In</a>
+                    </li>
+                    <li>
+                        <a href="/register" class="{{ request()->is('register') ? 'active' : ''}} logo">Register</a>
+                    </li>
+                    @endguest
+                    @auth
+                    <li>
+                        <a href="/logout" class="{{ request()->is('logout') ? 'active' : ''}} logo">Log Out</a>
+                    </li>
+                    @endauth
                 </ul>
             </nav>
         </header>
