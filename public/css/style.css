@@ -108,3 +108,7 @@ button {
     font-size: 0.95rem;
     font-style: italic;
 }
+
+p {
+    max-width: 65ch;
+}
