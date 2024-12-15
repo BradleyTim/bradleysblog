@@ -6,7 +6,7 @@
             
             <div class="formgroup">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="johndoe@example.com">
+                <input type="email" name="email" id="email" :value="old('email')" placeholder="johndoe@example.com">
             </div>
             @error('email')
                 <p class="error">{{ $message }}</p>

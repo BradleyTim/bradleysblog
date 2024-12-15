@@ -29,19 +29,13 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="/" class="{{ request()->is('/') ? 'active' : ''}} logo">Home</a>
+                        <a href="/blog" class="{{ request()->is('blog') ? 'active' : ''}} logo">Blog</a>
                     </li>
                     <li>
                         <a href="/about" class="{{ request()->is('about') ? 'active' : ''}} logo">About</a>
                     </li>
                     <li>
                         <a href="/contact" class="{{ request()->is('contact') ? 'active' : ''}} logo">Contact</a>
-                    </li>
-                    <li>
-                        <a href="/blog" class="{{ request()->is('blog') ? 'active' : ''}} logo">Blog</a>
-                    </li>
-                    <li>
-                        <a href="/blog/create" class="{{ request()->is('blog/create') ? 'active' : ''}} logo">Create</a>
                     </li>
                     @guest
                     <li>
@@ -53,7 +47,13 @@
                     @endguest
                     @auth
                     <li>
-                        <a href="/logout" class="{{ request()->is('logout') ? 'active' : ''}} logo">Log Out</a>
+                        <a href="/blog/create" class="{{ request()->is('blog/create') ? 'active' : ''}} logo">Create</a>
+                    </li>
+                    <li>
+                        <form action="/logout" method="POST">
+                            @csrf
+                            <button class="logout-button" type="submit">Log Out</button>
+                        </form>
                     </li>
                     @endauth
                 </ul>
