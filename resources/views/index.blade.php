@@ -1,5 +1,5 @@
 <x-layout>
-    <section class="container">
+    <section class="container index">
         <h1>{{$greeting}},</h1>
         <p> I'm {{$name}}, a lawyer and Technologist living in Nairobi, Kenya.</p> 
         <p>I currently work at Tourism Fund, developing a more sustainable and equitable Tourism Industry for Kenya. I've worked previously at Commission on Revenue Allocation, and Judiciary.</p>
