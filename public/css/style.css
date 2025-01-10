@@ -71,7 +71,7 @@ nav ul li:not(:last-child) {
 }
 
 .active {
-    color: orangered;
+    color: #CB721C;
 }
 
 main * + * {
@@ -135,6 +135,7 @@ p {
 
 h1 {
     font-size: clamp(2rem, calc(7vw + 1rem), 5rem); 
+    color: #4676A9;
 }
 
 img {
@@ -146,4 +147,20 @@ img {
 
 footer {
     margin-bottom: 2rem;
+}
+
+article {
+    border-top: 1px solid #666;
+    padding-block: 2rem;
+}
+
+article > p {
+    font-size: 0.85rem;
+    color: #4676A9;
+}
+
+article > a {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
 }
