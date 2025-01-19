@@ -53,6 +53,10 @@ nav ul li {
     padding-inline-end: 1rem;
 }
 
+nav ul li a:hover {
+    color: #CB721C;
+}
+
 nav ul li:not(:last-child) {
     border-right: 1px solid #666;
 }
@@ -102,11 +106,11 @@ textarea {
 }
 
 button {
-    border: 1px solid #333;
+    border: 1px solid #4676A9;
     border-radius: 0.25rem;
     padding: 0.75rem 1rem;
     margin-right: 1rem;
-    background-color: #333;
+    background-color: #4676A9;
     color: #fefefe;
     cursor: pointer; 
 }
@@ -114,19 +118,24 @@ button {
 .logout-button {
     all: unset;
     font-weight: bold;
-    color: orangered;
+    color: #CB721C;
     cursor: pointer;
 }
 
 .delete-button {
-    background-color: orangered;
+    background-color: #CB721C;
     border: none;
 }
 
 .error {
-    color: orangered;
+    color: #CB721C;
     font-size: 0.95rem;
     font-style: italic;
+}
+
+.wrapper {
+    max-inline-size: 65ch;
+    margin-inline: auto;
 }
 
 p {
