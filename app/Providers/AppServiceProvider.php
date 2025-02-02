@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Contracts\Pagination\Paginator;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
+use App\Models\Blog;
+use App\Models\User;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Gate::define('delete-blog', function(?User $user, Blog $blog) {
+        // Gate::define('edit-blog', function(User $user, Blog $blog) {
         //     return $blog->user->is($user);
         // });
     }

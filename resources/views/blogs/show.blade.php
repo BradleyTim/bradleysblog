@@ -5,8 +5,12 @@
         <div>
             {!! $blog->body !!}
         </div>
-        <div>
-            <a href="/blog/{{ $blog->id }}/edit">Edit</a>
-        </div>
+        {{-- @can('edit-blog') --}}
+        @auth
+            <div>
+                <a href="/blog/{{ $blog->id }}/edit">Edit</a>
+            </div>
+        @endauth 
+        {{-- @endcan --}}
     </section>
 </x-layout>
